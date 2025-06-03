@@ -58,7 +58,7 @@ export const login = async (req, res) => {
 }
 
 // controler to check if user is auth..ed
-export const checkAuth = (req,res)=>{ 
+export const checkAuth = (req,res)=>{
   res.json({success:true, user: req.user});
 }
 

@@ -1,4 +1,4 @@
-import Message from "../models/message.js";
+import Message from "../models/Message.js";
 import User from "../models/User.js";
 import cloudinary from "../lib/cloudinary.js";
 import { io, userSocketMap } from "../server.js"
@@ -52,7 +52,7 @@ export const markMessageAsSeen = async (req,res) => {
   try {
      const { id } = req.params;
      await Message.findByIdAndUpdate(id, {seen: true});
-     res.json({success: true})    
+     res.json({success: true})
   } catch (error) {
        res.json({success: false, message: error.message})
         console.log(error.message);
